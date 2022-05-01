@@ -79,7 +79,9 @@ body {
   display: flex;
   align-items: center;
 
+  -webkit-transform-origin: left;
   transform-origin: left;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
@@ -92,6 +94,8 @@ body {
 
 .outside-view .front-text {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
   transform-style: preserve-3d;
   margin-left: 40px;
   text-align: center;
@@ -124,6 +128,7 @@ body {
   height: 100%;
 
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .cake {

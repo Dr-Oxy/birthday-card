@@ -15,38 +15,75 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="outside-view">
-          <div class="front-text">
-            <span>Happy</span>
-
-            <span>Birth</span>
-            <span>Day!!!</span>
-          </div>
-          <img src="./assets/card-decor-removebg-preview.png" alt="" />
-          <img class="cake" src="./assets/red-birthday-cake-png-5.png" alt="" />
-        </div>
-
-        <div class="inside-view">
-          <div class="wishes-box">
-            <h3>Happy Birthday!!!</h3>
-
-            <span class="celebrant">Dear Daniel George,</span>
-
-            <div class="texts">
-              <p>I wish you a year that is jam-packed with joy and happiness</p>
-              <p>You were born to do great things!</p>
-              <p>
-                May you always follow your own unique path when walking through
-                this life's journey. You're an inspiration, and I hope you have
-                a fantastic birthday!
-              </p>
+      <div class="card-container">
+        <div class="card">
+          <div class="outside-view">
+            <div class="front-text">
+              <span>Happy</span>
+              <span>Birth</span>
+              <span>Day!!!</span>
             </div>
-
-            <span class="sender">--Chi</span>
+            <img src="./assets/card-decor-removebg-preview.png" alt="" />
+            <img
+              class="cake"
+              src="./assets/red-birthday-cake-png-5.png"
+              alt=""
+            />
+          </div>
+          <div class="inside-view">
+            <div class="wishes-box">
+              <h3>Happy Birthday!!!</h3>
+              <span class="celebrant">Dear Daniel George,</span>
+              <div class="texts">
+                <p>
+                  I wish you a year that is jam-packed with joy and happiness
+                </p>
+                <p>You were born to do great things!</p>
+                <p>
+                  May you always follow your own unique path when walking
+                  through this life's journey. You're an inspiration, and I hope
+                  you have a fantastic birthday!
+                </p>
+              </div>
+              <div class="sender">From Chioma</div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="date">April 28<sup>th</sup></div>
+
+      <div class="name-text">Daniel George</div>
+
+      <img
+        class="red-balloon"
+        src="./assets/single-red-balloon.png"
+        alt="red balloon"
+      />
+
+      <img
+        class="teddy-bear"
+        src="./assets/teddyandballoon-removebg-preview.png"
+        alt="teddy-bear holding pink and red heart"
+      />
+
+      <img
+        class="white-balloon"
+        src="./assets/white-balloon-removebg.png"
+        alt="white balloon"
+      />
     </div>
+
+    <script src="confetti.js"></script>
+
+    <script>
+      const start = () => {
+        setTimeout(function () {
+          confetti.start();
+        }, 4000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+      };
+
+      start();
+    </script>
   </body>
 </html>

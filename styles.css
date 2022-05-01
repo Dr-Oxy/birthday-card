@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #1a1a1a;
+  background-color: white;
+  font-size: 16px;
+
+  font-family: 'Sora', 'Water Brush' sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+
+  background-color: red;
+  color: #111;
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  /* transform: perspective(1000px); */
+
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card:hover {
+  transform: rotate(-4deg);
+}
+
+.outside-view {
+  background-color: red;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  transition: 1s;
+}
+
+.card:hover .outside-view {
+  transform: rotateY(-130deg);
+}
+
+.outside-view .front-text {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.front-text span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.665);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 32px;
+
+  -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.751);
+}
+
+.front-text span:nth-child(2) {
+  margin: 10px 0;
+}
+
+.outside-view img {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+}
+
+.cake {
+  transform: rotateY(180deg);
+}
+
+.inside-view {
+  padding: 10px;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+}
+
+.wishes-box {
+  padding: 10px 20px;
+  border: 5px solid rgb(255, 255, 255);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wishes-box h3 {
+  color: #bba14f;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wishes-box .celebrant {
+  font-style: italic;
+  font-family: 'Water Brush';
+  font-size: 32px;
+  color: white;
+}
+
+.wishes-box .texts {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.wishes-box .sender {
+  margin-top: 20px;
+  text-align: right;
+  display: block;
+  font-family: 'Water Brush';
+}

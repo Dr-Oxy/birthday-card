@@ -216,7 +216,7 @@ body {
     6px -6px 18px rgba(255, 255, 255, 0.8);
 
   position: absolute;
-  top: 5%;
+  top: 3%;
   animation: shadow 6s ease 2s forwards;
 }
 
